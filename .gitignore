@@ -1,16 +1,56 @@
-# Node rules:
-## Grunt intermediate storage (http://gruntjs.com/creating-plugins#storing-task-files)
-.grunt
+npm-debug.log
+/node_modules
+/testApp
+.DS_Store
+__test
+__testApp
+__testModule
 
-## Dependency directory
-## Commenting this out is preferred by some people, see
-## https://docs.npmjs.com/misc/faq#should-i-check-my-node_modules-folder-into-git
-node_modules
+**/.vs
+**/.vscode
 
-# Book build output
-_book
+# User-specific files
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
 
-# eBook build output
-*.epub
-*.mobi
-*.pdf
+# NCrunch
+_NCrunch_*
+.*crunch*.local.xml
+nCrunchTemp_*
+
+my-ip-address.js
+
+# Pact
+artefacts/pacts/*.json
+
+# WebStorm
+/.idea
+/*.iml
+
+# VS
+/.vs
+
+/source/artifacts
+
+
+# Build results
+[Dd]ebug/
+[Dd]ebugPublic/
+[Rr]elease/
+[Rr]eleases/
+x64/
+x86/
+bld/
+[Bb]in/
+[Oo]bj/
+[Ll]og/
+
+
+*.orig
+.idea
+**/package-lock.json
+.vs
+/packages
+/TestResults
