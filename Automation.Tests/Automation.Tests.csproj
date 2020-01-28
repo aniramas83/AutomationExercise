@@ -129,6 +129,7 @@
     <Compile Include="Datamodels\TaxCalcModel.cs" />
     <Compile Include="Datamodels\DemoFormModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Steps\ApiSteps.cs" />
     <Compile Include="Steps\LifeViewDemoSteps.cs" />
     <Compile Include="Steps\TaxCalculatorSteps.cs" />
     <Compile Include="Text\Text.cs" />

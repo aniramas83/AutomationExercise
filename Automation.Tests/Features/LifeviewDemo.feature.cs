@@ -92,12 +92,19 @@ namespace Automation.Tests.Features
         [NUnit.Framework.TestAttribute()]
         [NUnit.Framework.DescriptionAttribute("Lifeview demo form")]
         [NUnit.Framework.CategoryAttribute("smoke")]
-        public virtual void LifeviewDemoForm()
+        [NUnit.Framework.TestCaseAttribute("20-Jan-2020", "PM", null)]
+        [NUnit.Framework.TestCaseAttribute("28-Feb-2020", "AM", null)]
+        [NUnit.Framework.TestCaseAttribute("", "AM", null)]
+        public virtual void LifeviewDemoForm(string date, string timeStandard, string[] exampleTags)
         {
-            string[] tagsOfScenario = new string[] {
+            string[] @__tags = new string[] {
                     "smoke"};
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Lifeview demo form", null, new string[] {
-                        "smoke"});
+            if ((exampleTags != null))
+            {
+                @__tags = System.Linq.Enumerable.ToArray(System.Linq.Enumerable.Concat(@__tags, exampleTags));
+            }
+            string[] tagsOfScenario = @__tags;
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Lifeview demo form", null, @__tags);
 #line 15
 this.ScenarioInitialize(scenarioInfo);
 #line hidden
@@ -147,10 +154,10 @@ this.FeatureBackground();
                             "02102579612"});
                 table1.AddRow(new string[] {
                             "Date",
-                            "28-Feb-2020"});
+                            string.Format("{0}", date)});
                 table1.AddRow(new string[] {
                             "TimeStandard",
-                            "PM"});
+                            string.Format("{0}", timeStandard)});
                 table1.AddRow(new string[] {
                             "Details",
                             "Sample demo input"});

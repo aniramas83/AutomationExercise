@@ -20,25 +20,23 @@ namespace Automation.Tests.Features
     [System.CodeDom.Compiler.GeneratedCodeAttribute("TechTalk.SpecFlow", "3.1.0.0")]
     [System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
     [NUnit.Framework.TestFixtureAttribute()]
-    [NUnit.Framework.DescriptionAttribute("TaxCalculator")]
-    public partial class TaxCalculatorFeature
+    [NUnit.Framework.DescriptionAttribute("PostApi")]
+    public partial class PostApiFeature
     {
         
         private TechTalk.SpecFlow.ITestRunner testRunner;
         
         private string[] _featureTags = ((string[])(null));
         
-#line 1 "TaxCalculator.feature"
+#line 1 "PostApi.feature"
 #line hidden
         
         [NUnit.Framework.OneTimeSetUpAttribute()]
         public virtual void FeatureSetup()
         {
             testRunner = TechTalk.SpecFlow.TestRunnerManager.GetTestRunner();
-            TechTalk.SpecFlow.FeatureInfo featureInfo = new TechTalk.SpecFlow.FeatureInfo(new System.Globalization.CultureInfo("en-US"), "TaxCalculator", "On the ATO page https://www.ato.gov.au/Calculators-and-tools/Host/?anchor=STC&anc" +
-                    "hor=STC#STC/questions \r\n•\tNavigate to the page\r\n•\tCreate a test to verify calcul" +
-                    "ated tax for at least three combinations of assessment year, Income and residenc" +
-                    "y status ", ProgrammingLanguage.CSharp, ((string[])(null)));
+            TechTalk.SpecFlow.FeatureInfo featureInfo = new TechTalk.SpecFlow.FeatureInfo(new System.Globalization.CultureInfo("en-US"), "PostApi", "\t//https://digitalapi.auspost.com.au/postage/v4/catalogue/service.json?category=I" +
+                    "NTERNATIONAL&from=AU&to=NZ", ProgrammingLanguage.CSharp, ((string[])(null)));
             testRunner.OnFeatureStart(featureInfo);
         }
         
@@ -77,22 +75,15 @@ namespace Automation.Tests.Features
         }
         
         [NUnit.Framework.TestAttribute()]
-        [NUnit.Framework.DescriptionAttribute("Tax calculator validation")]
-        [NUnit.Framework.CategoryAttribute("smoke")]
-        [NUnit.Framework.TestCaseAttribute("2018-19", "500000", "Resident for full year", "", null)]
-        [NUnit.Framework.TestCaseAttribute("2017-18", "75000", "Non-resident for full year", "", null)]
-        [NUnit.Framework.TestCaseAttribute("2016-17", "80000", "Part-year resident", "2", null)]
-        public virtual void TaxCalculatorValidation(string year, string amount, string residency, string numberOfMonths, string[] exampleTags)
+        [NUnit.Framework.DescriptionAttribute("Validate postal cost to different countries")]
+        [NUnit.Framework.TestCaseAttribute("AU", "NZ", null)]
+        [NUnit.Framework.TestCaseAttribute("AU", "CN", null)]
+        [NUnit.Framework.TestCaseAttribute("AU", "BE", null)]
+        public virtual void ValidatePostalCostToDifferentCountries(string fromCountry, string toCountry, string[] exampleTags)
         {
-            string[] @__tags = new string[] {
-                    "smoke"};
-            if ((exampleTags != null))
-            {
-                @__tags = System.Linq.Enumerable.ToArray(System.Linq.Enumerable.Concat(@__tags, exampleTags));
-            }
-            string[] tagsOfScenario = @__tags;
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Tax calculator validation", null, @__tags);
-#line 7
+            string[] tagsOfScenario = exampleTags;
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Validate postal cost to different countries", null, exampleTags);
+#line 4
 this.ScenarioInitialize(scenarioInfo);
 #line hidden
             bool isScenarioIgnored = default(bool);
@@ -112,29 +103,17 @@ this.ScenarioInitialize(scenarioInfo);
             else
             {
                 this.ScenarioStart();
+                TechTalk.SpecFlow.Table table2 = new TechTalk.SpecFlow.Table(new string[] {
+                            "FromCountry",
+                            "ToCountry"});
+                table2.AddRow(new string[] {
+                            string.Format("{0}", fromCountry),
+                            string.Format("{0}", toCountry)});
+#line 5
+ testRunner.When("I call australia post api with:", ((string)(null)), table2, "When ");
+#line hidden
 #line 8
- testRunner.Given("I am at the tax calculator page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
-#line hidden
-                TechTalk.SpecFlow.Table table3 = new TechTalk.SpecFlow.Table(new string[] {
-                            "Label",
-                            "Value"});
-                table3.AddRow(new string[] {
-                            "Year",
-                            string.Format("{0}", year)});
-                table3.AddRow(new string[] {
-                            "Amount",
-                            string.Format("{0}", amount)});
-                table3.AddRow(new string[] {
-                            "Residency",
-                            string.Format("{0}", residency)});
-                table3.AddRow(new string[] {
-                            "NumberOfMonths",
-                            string.Format("{0}", numberOfMonths)});
-#line 9
- testRunner.When("I enter all required options as:", ((string)(null)), table3, "When ");
-#line hidden
-#line 15
- testRunner.Then("I verify the tax calculation is not null", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+ testRunner.Then("I validate the price of the post", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             }
             this.ScenarioCleanup();
