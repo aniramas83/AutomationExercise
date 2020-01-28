@@ -8,6 +8,8 @@ Four projects created in this solution to separate business logic with code logi
 All the business scenarios are written in BDD format.
 
 Test execution can be either done from visual studio test explorer or nunit console run.
+Example nunit command:
+.\nunit3-console.exe Automation.Tests.dll --where="cat == smoke"
 
 Scenario information.
 Three scenarios are included as part of this test sln.
