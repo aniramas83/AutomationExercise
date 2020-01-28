@@ -48,7 +48,8 @@ namespace Automation.Core.Hooks
 		{
 			var options = new Options
 			{
-				SiteUri = new Uri(Settings.SiteUrl),
+				MlcSiteUri = new Uri(Settings.MlcSiteUrl),
+				TaxSiteUri=new Uri(Settings.TaxSiteUrl)
 			};
 			_objectContainer.RegisterInstanceAs(options);
 		}

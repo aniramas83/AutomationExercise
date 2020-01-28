@@ -5,7 +5,8 @@ namespace Automation.Core
 {
 	public sealed class Options
 	{
-		public Uri SiteUri { get; set; }
+		public Uri MlcSiteUri { get; set; }
+		public Uri TaxSiteUri { get; set; }
 
 	}
 }

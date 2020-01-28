@@ -50,24 +50,14 @@
   <ItemGroup>
     <Compile Include="BasePage.cs" />
     <Compile Include="CommonPage.cs" />
-    <Compile Include="FinishedPage.cs" />
-    <Compile Include="TermsandConditionsPage.cs" />
-    <Compile Include="InstructionsPage.cs" />
-    <Compile Include="AccountDetailsPage.cs" />
-    <Compile Include="CookiesPage.cs" />
-    <Compile Include="LoginPage.cs" />
-    <Compile Include="LocationPage.cs" />
-    <Compile Include="PersonalDetailsPage.cs" />
+    <Compile Include="LifeViewDemoPage.cs" />
+    <Compile Include="TaxCalculatorPage.cs" />
+    <Compile Include="LifeViewPage.cs" />
+    <Compile Include="HomePage.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\Automation.Configurations\Automation.Configurations.csproj">
-      <Project>{3A210A39-4028-40BD-8FF6-16A661F1FDBF}</Project>
-      <Name>Automation.Configurations</Name>
-    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

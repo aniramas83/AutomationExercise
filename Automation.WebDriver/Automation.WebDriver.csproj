@@ -64,12 +64,6 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Automation.Configurations\Automation.Configurations.csproj">
-      <Project>{3a210a39-4028-40bd-8ff6-16a661f1fdbf}</Project>
-      <Name>Automation.Configurations</Name>
-    </ProjectReference>
-  </ItemGroup>
-  <ItemGroup>
     <Content Include="chromedriver.exe">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>

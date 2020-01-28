@@ -9,8 +9,6 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Automation.Pages", "Automat
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Automation.WebDriver", "Automation.WebDriver\Automation.WebDriver.csproj", "{82FAC78B-C642-4DB1-A545-408141D39843}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Automation.Configurations", "Automation.Configurations\Automation.Configurations.csproj", "{3A210A39-4028-40BD-8FF6-16A661F1FDBF}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Automation.Tests", "Automation.Tests\Automation.Tests.csproj", "{29B5758D-5A4F-4E05-835A-2C182F1AF0BF}"
 EndProject
 Global
@@ -31,10 +29,6 @@ Global
 		{82FAC78B-C642-4DB1-A545-408141D39843}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{82FAC78B-C642-4DB1-A545-408141D39843}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{82FAC78B-C642-4DB1-A545-408141D39843}.Release|Any CPU.Build.0 = Release|Any CPU
-		{3A210A39-4028-40BD-8FF6-16A661F1FDBF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{3A210A39-4028-40BD-8FF6-16A661F1FDBF}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{3A210A39-4028-40BD-8FF6-16A661F1FDBF}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{3A210A39-4028-40BD-8FF6-16A661F1FDBF}.Release|Any CPU.Build.0 = Release|Any CPU
 		{29B5758D-5A4F-4E05-835A-2C182F1AF0BF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{29B5758D-5A4F-4E05-835A-2C182F1AF0BF}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{29B5758D-5A4F-4E05-835A-2C182F1AF0BF}.Release|Any CPU.ActiveCfg = Release|Any CPU

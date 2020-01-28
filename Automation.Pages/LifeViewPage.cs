@@ -8,21 +8,22 @@ using System.Threading.Tasks;
 
 namespace Automation.Pages
 {
-	public class LoginPage : BasePage
+	public class LifeViewPage : BasePage
 	{
 		private IWebDriver _driver;
-		public LoginPage(IWebDriver webDriver) : base(webDriver)
+		public LifeViewPage(IWebDriver webDriver) : base(webDriver)
 		{
 			_driver = webDriver;
 		}
 
 		#region Elements
-		private readonly By _linkCreatePatient = By.XPath("//a[text()='Create a patient account']");
+		private readonly By _buttonRequestDemo = By.XPath("//span[contains(text(),'Request a demo')]");
+		
 		#endregion
 
-		public void CreatePatient()
+		public void ClickRequestDemo()
 		{
-			FindElement(_linkCreatePatient).Click();
+			FindElement(_buttonRequestDemo).Click();
 		}
 	}
 }
