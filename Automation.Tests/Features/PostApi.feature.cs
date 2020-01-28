@@ -35,8 +35,9 @@ namespace Automation.Tests.Features
         public virtual void FeatureSetup()
         {
             testRunner = TechTalk.SpecFlow.TestRunnerManager.GetTestRunner();
-            TechTalk.SpecFlow.FeatureInfo featureInfo = new TechTalk.SpecFlow.FeatureInfo(new System.Globalization.CultureInfo("en-US"), "PostApi", "\t//https://digitalapi.auspost.com.au/postage/v4/catalogue/service.json?category=I" +
-                    "NTERNATIONAL&from=AU&to=NZ", ProgrammingLanguage.CSharp, ((string[])(null)));
+            TechTalk.SpecFlow.FeatureInfo featureInfo = new TechTalk.SpecFlow.FeatureInfo(new System.Globalization.CultureInfo("en-US"), "PostApi", @"For the API test, please use the Australia Post API to calculate shipping costs for parcels of
+different weights to at least three countries. In your test add what you believe should be verified/checked as part of the API.
+	https://digitalapi.auspost.com.au/postage/v4/catalogue/service.json?category=INTERNATIONAL&from=AU&to=NZ", ProgrammingLanguage.CSharp, ((string[])(null)));
             testRunner.OnFeatureStart(featureInfo);
         }
         
@@ -83,7 +84,7 @@ namespace Automation.Tests.Features
         {
             string[] tagsOfScenario = exampleTags;
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Validate postal cost to different countries", null, exampleTags);
-#line 4
+#line 6
 this.ScenarioInitialize(scenarioInfo);
 #line hidden
             bool isScenarioIgnored = default(bool);
@@ -109,10 +110,10 @@ this.ScenarioInitialize(scenarioInfo);
                 table2.AddRow(new string[] {
                             string.Format("{0}", fromCountry),
                             string.Format("{0}", toCountry)});
-#line 5
+#line 7
  testRunner.When("I call australia post api with:", ((string)(null)), table2, "When ");
 #line hidden
-#line 8
+#line 10
  testRunner.Then("I validate the price of the post", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             }
