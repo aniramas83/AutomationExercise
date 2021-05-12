@@ -35,8 +35,8 @@ Inputs for above scenarios can be updated via feature file of specflow.
 ## Other scenarios
 **Recommendation is to leave end to end happy path scenario at UI automation and rest move to API automation**
 **Examples**
-1. UI automation to cover - One flow of Single or Joint applicant borrowing limit validation
-2. API validations
+1. UI automation coverage - Few combinations of borrowing limit calculation
+2. API vautomation coverage (In depth validations of below)
 	a. Field validations of whether accepting correct input and rejecting invalid inputs
 	b. Input combinations (leaving some default and other fields with updated values)
 	c. Amount with negative values
