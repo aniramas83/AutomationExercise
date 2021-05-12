@@ -32,7 +32,9 @@ After calculation, clicking on start over set the fields default value.
 
 Inputs for above scenarios can be updated via feature file of specflow.
 
-**By leaving only end to end happy path at UI and rest can be moved to API. Example **
+##Other scenarios
+**Recommendation is to leave end to end happy path scenario at UI automation and rest move to API automation
+**Examples
 1. UI automation to cover - One flow of Single or Joint applicant borrowing limit validation
 2. API validations
 	a. Field validations of whether accepting correct input and rejecting invalid inputs
