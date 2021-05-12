@@ -19,8 +19,8 @@ Three scenarios are included as part of this test sln.
 Input required for this scenario are Applicant type, dependants, loan purpose, income, other income, expenses, current home loan repayment, 
 other loan repayment, other commitmments and credit card limit. 
 
-**Improvement - Scenario can be improved by utilising the default values. 
-				  Getting input only if it differs than default. **
+**Improvement - Scenario can be improved by utilising the default values.  
+Getting input only if it differs than default. **
 
 
 
