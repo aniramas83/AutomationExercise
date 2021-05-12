@@ -31,7 +31,7 @@ namespace Automation.Tests.Steps
         public void GivenIAmAtCreatePatientAccountPage()
         {
             //Launch the web portal
-            _driver.Navigate().GoToUrl(Settings.MlcSiteUrl);
+            _driver.Navigate().GoToUrl(Settings.WebUrl);
             _driver.Manage().Window.Maximize();
         }
 

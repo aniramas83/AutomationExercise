@@ -139,6 +139,86 @@ this.ScenarioInitialize(scenarioInfo);
             }
             this.ScenarioCleanup();
         }
+        
+        [NUnit.Framework.TestAttribute()]
+        [NUnit.Framework.DescriptionAttribute("Loan calculator validation")]
+        [NUnit.Framework.CategoryAttribute("smoke")]
+        [NUnit.Framework.TestCaseAttribute("Single", "0", "Home to live in", "80,000", "10,000", "500", "0", "140", "0", "10,000", null)]
+        public virtual void LoanCalculatorValidation(string type, string dependants, string purpose, string income, string otherIncome, string expense, string hlRepay, string otherLoan, string commitments, string creditCardLimit, string[] exampleTags)
+        {
+            string[] @__tags = new string[] {
+                    "smoke"};
+            if ((exampleTags != null))
+            {
+                @__tags = System.Linq.Enumerable.ToArray(System.Linq.Enumerable.Concat(@__tags, exampleTags));
+            }
+            string[] tagsOfScenario = @__tags;
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Loan calculator validation", null, @__tags);
+#line 24
+this.ScenarioInitialize(scenarioInfo);
+#line hidden
+            bool isScenarioIgnored = default(bool);
+            bool isFeatureIgnored = default(bool);
+            if ((tagsOfScenario != null))
+            {
+                isScenarioIgnored = tagsOfScenario.Where(__entry => __entry != null).Where(__entry => String.Equals(__entry, "ignore", StringComparison.CurrentCultureIgnoreCase)).Any();
+            }
+            if ((this._featureTags != null))
+            {
+                isFeatureIgnored = this._featureTags.Where(__entry => __entry != null).Where(__entry => String.Equals(__entry, "ignore", StringComparison.CurrentCultureIgnoreCase)).Any();
+            }
+            if ((isScenarioIgnored || isFeatureIgnored))
+            {
+                testRunner.SkipScenario();
+            }
+            else
+            {
+                this.ScenarioStart();
+#line 25
+ testRunner.Given("I am at loan calculator page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+#line hidden
+                TechTalk.SpecFlow.Table table4 = new TechTalk.SpecFlow.Table(new string[] {
+                            "Label",
+                            "Value"});
+                table4.AddRow(new string[] {
+                            "ApplicationType",
+                            string.Format("{0}", type)});
+                table4.AddRow(new string[] {
+                            "Dependants",
+                            string.Format("{0}", dependants)});
+                table4.AddRow(new string[] {
+                            "PropertyPurpose",
+                            string.Format("{0}", purpose)});
+                table4.AddRow(new string[] {
+                            "IncomeBeforeTax",
+                            string.Format("{0}", income)});
+                table4.AddRow(new string[] {
+                            "OtherIncome",
+                            string.Format("{0}", otherIncome)});
+                table4.AddRow(new string[] {
+                            "LivingExpenses",
+                            string.Format("{0}", expense)});
+                table4.AddRow(new string[] {
+                            "CurrentHlRepay",
+                            string.Format("{0}", hlRepay)});
+                table4.AddRow(new string[] {
+                            "OtherLoanRepay",
+                            string.Format("{0}", otherLoan)});
+                table4.AddRow(new string[] {
+                            "OtherCommitments",
+                            string.Format("{0}", commitments)});
+                table4.AddRow(new string[] {
+                            "CreditCardLimit",
+                            string.Format("{0}", creditCardLimit)});
+#line 26
+ testRunner.When("I enter all required income details as:", ((string)(null)), table4, "When ");
+#line hidden
+#line 38
+ testRunner.Then("I verify the tax calculation is not null", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line hidden
+            }
+            this.ScenarioCleanup();
+        }
     }
 }
 #pragma warning restore

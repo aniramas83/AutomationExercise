@@ -17,7 +17,7 @@ namespace Automation.Pages.Common
 		protected IWebElement FindElement(By locator)
 		{
 			var wait = new WebDriverWait(WebDriver, TimeSpan.FromSeconds(30));
-			wait.Until(__driver => __driver.FindElement(locator).Displayed);
+			wait.Until(__driver => __driver.FindElement(locator).Enabled);
 			return WebDriver.FindElement(locator);
 		}
 

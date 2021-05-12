@@ -25,6 +25,7 @@ namespace Automation.WebDriver
 			{
 				case "Chrome":
 					var chromeOptions = new ChromeOptions();
+					chromeOptions.PageLoadStrategy = PageLoadStrategy.Normal;
 					chromeOptions.AddExcludedArgument("ignore-certificate-errors");
 					chromeOptions.AddUserProfilePreference("credentials_enable_service", false);
 					chromeOptions.AddUserProfilePreference("profile.password_manager_enabled", false);
