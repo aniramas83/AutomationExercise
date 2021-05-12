@@ -49,12 +49,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="BasePage.cs" />
-    <Compile Include="ApiHandler.cs" />
-    <Compile Include="CommonPage.cs" />
-    <Compile Include="LifeViewDemoPage.cs" />
     <Compile Include="LoanCalculatorPage.cs" />
-    <Compile Include="LifeViewPage.cs" />
-    <Compile Include="HomePage.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

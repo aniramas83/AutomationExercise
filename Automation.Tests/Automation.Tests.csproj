@@ -130,12 +130,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Datamodels\LoanCalcModel.cs" />
-    <Compile Include="Datamodels\DemoFormModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Steps\ApiSteps.cs" />
-    <Compile Include="Steps\LifeViewDemoSteps.cs" />
     <Compile Include="Steps\LoanCalculatorSteps.cs" />
-    <Compile Include="Text\Text.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Automation.Core\Automation.Core.csproj">
@@ -155,8 +151,6 @@
     <None Include="App.config">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
-    <None Include="Features\LifeviewDemo.feature" />
-    <None Include="Features\PostApi.feature" />
     <None Include="Features\LoanCalculator.feature" />
     <None Include="packages.config" />
   </ItemGroup>

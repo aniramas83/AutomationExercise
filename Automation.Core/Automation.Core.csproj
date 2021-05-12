@@ -124,7 +124,6 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="BaseSteps.cs" />
     <Compile Include="Hooks\BeforeAfterScenario.cs" />
     <Compile Include="Hooks\BeforeAfterStep.cs" />
     <Compile Include="Options.cs" />
