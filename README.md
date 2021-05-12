@@ -2,7 +2,7 @@
 Web automation exercises
 
 ## Coding details:
-Test is written in .net 4.7.2 using selnium interface with libraries of Specflow, Selenium and so on.
+Test is written in .net 4.7.2 using selenium interface with libraries of Specflow, Selenium and so on.
 Four projects created in this solution to separate business logic with code logic.
 
 All the business scenarios are written in BDD format.
