@@ -124,53 +124,53 @@ this.ScenarioInitialize(scenarioInfo);
 #line 8
  testRunner.Given("I am at loan calculator page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
+                TechTalk.SpecFlow.Table table1 = new TechTalk.SpecFlow.Table(new string[] {
+                            "Label",
+                            "Value"});
+                table1.AddRow(new string[] {
+                            "ApplicationType",
+                            string.Format("{0}", type)});
+                table1.AddRow(new string[] {
+                            "Dependants",
+                            string.Format("{0}", dependants)});
+                table1.AddRow(new string[] {
+                            "PropertyPurpose",
+                            string.Format("{0}", purpose)});
+#line 9
+ testRunner.When("I enter your details as:", ((string)(null)), table1, "When ");
+#line hidden
                 TechTalk.SpecFlow.Table table2 = new TechTalk.SpecFlow.Table(new string[] {
                             "Label",
                             "Value"});
                 table2.AddRow(new string[] {
-                            "ApplicationType",
-                            string.Format("{0}", type)});
+                            "IncomeBeforeTax",
+                            string.Format("{0}", income)});
                 table2.AddRow(new string[] {
-                            "Dependants",
-                            string.Format("{0}", dependants)});
-                table2.AddRow(new string[] {
-                            "PropertyPurpose",
-                            string.Format("{0}", purpose)});
-#line 9
- testRunner.When("I enter your details as:", ((string)(null)), table2, "When ");
+                            "OtherIncome",
+                            string.Format("{0}", otherIncome)});
+#line 14
+ testRunner.And("I enter your earnings as:", ((string)(null)), table2, "And ");
 #line hidden
                 TechTalk.SpecFlow.Table table3 = new TechTalk.SpecFlow.Table(new string[] {
                             "Label",
                             "Value"});
                 table3.AddRow(new string[] {
-                            "IncomeBeforeTax",
-                            string.Format("{0}", income)});
-                table3.AddRow(new string[] {
-                            "OtherIncome",
-                            string.Format("{0}", otherIncome)});
-#line 14
- testRunner.And("I enter your earnings as:", ((string)(null)), table3, "And ");
-#line hidden
-                TechTalk.SpecFlow.Table table4 = new TechTalk.SpecFlow.Table(new string[] {
-                            "Label",
-                            "Value"});
-                table4.AddRow(new string[] {
                             "LivingExpenses",
                             string.Format("{0}", expense)});
-                table4.AddRow(new string[] {
+                table3.AddRow(new string[] {
                             "CurrentHlRepay",
                             string.Format("{0}", hlRepay)});
-                table4.AddRow(new string[] {
+                table3.AddRow(new string[] {
                             "OtherLoanRepay",
                             string.Format("{0}", otherLoan)});
-                table4.AddRow(new string[] {
+                table3.AddRow(new string[] {
                             "OtherCommitments",
                             string.Format("{0}", commitments)});
-                table4.AddRow(new string[] {
+                table3.AddRow(new string[] {
                             "CreditCardLimit",
                             string.Format("{0}", creditCardLimit)});
 #line 18
- testRunner.And("I enter your expenses as:", ((string)(null)), table4, "And ");
+ testRunner.And("I enter your expenses as:", ((string)(null)), table3, "And ");
 #line hidden
 #line 25
  testRunner.Then(string.Format("I verify borrowing estimate is \"{0}\"", limit), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -181,12 +181,14 @@ this.ScenarioInitialize(scenarioInfo);
         
         [NUnit.Framework.TestAttribute()]
         [NUnit.Framework.DescriptionAttribute("Validate fields default value")]
+        [NUnit.Framework.CategoryAttribute("smoke")]
         public virtual void ValidateFieldsDefaultValue()
         {
-            string[] tagsOfScenario = ((string[])(null));
+            string[] tagsOfScenario = new string[] {
+                    "smoke"};
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Validate fields default value", null, tagsOfScenario, argumentsOfScenario, this._featureTags);
-#line 32
+#line 33
 this.ScenarioInitialize(scenarioInfo);
 #line hidden
             bool isScenarioIgnored = default(bool);
@@ -206,16 +208,16 @@ this.ScenarioInitialize(scenarioInfo);
             else
             {
                 this.ScenarioStart();
-#line 33
+#line 34
  testRunner.Given("I am at loan calculator page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
-#line 34
+#line 35
  testRunner.And("I entered required details for borrowing calculation", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-#line 35
+#line 36
  testRunner.When("I click on start over to start over the application", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
-#line 36
+#line 37
  testRunner.Then("I verify all the field values are set to default", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             }
